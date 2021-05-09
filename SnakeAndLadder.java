@@ -27,7 +27,9 @@ public class SnakeAndLadder {
 			if (Option == Ladder)
 			{
 				NEW_POSITION = (NEW_POSITION + randomDieNum);
-				System.out.println("Player Position is: " + NEW_POSITION);
+							if (NEW_POSITION > WINNING_POSITION)
+								 NEW_POSITION = (NEW_POSITION - randomDieNum);
+           					 System.out.println("Player Position is: " + NEW_POSITION);
 							if (NEW_POSITION == WINNING_POSITION)
 							break;
 			}
@@ -48,5 +50,3 @@ public class SnakeAndLadder {
 		}
 	}
 }
-
-
